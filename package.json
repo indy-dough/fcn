@@ -15,7 +15,7 @@
   "files": [
     "dist/**/*"
   ],
-  "repository": "git@github.com:indy-dough/usuba.git",
+  "repository": "git@github.com:indy-dough/fcn.git",
   "scripts": {
     "format": "prettier -w .",
     "bench": "yarn build && node ./bench/index.js",
