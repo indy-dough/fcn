@@ -12,6 +12,7 @@
   "private": false,
   "author": "Andrei Shevel <myindydough@gmail.com>",
   "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "files": [
     "dist/**/*"
   ],

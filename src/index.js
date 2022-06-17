@@ -3,7 +3,7 @@ function concat(result, arg) {
   return result + arg;
 }
 
-module.exports = function () {
+export default function fcn() {
   let result = '';
   let i = 0,
     key;
@@ -23,4 +23,4 @@ module.exports = function () {
   }
 
   return result;
-};
+}

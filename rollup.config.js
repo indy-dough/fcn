@@ -6,13 +6,24 @@ export default {
   input: 'src/index.js',
   output: [
     {
+      file: 'dist/index.esm.js',
+      format: 'es',
+    },
+    {
+      file: 'dist/index.esm.min.js',
+      format: 'es',
+      plugins: [terser()],
+    },
+    {
       file: 'dist/index.js',
       format: 'cjs',
+      exports: 'default',
     },
     {
       file: 'dist/index.min.js',
       format: 'cjs',
       plugins: [terser()],
+      exports: 'default',
     },
   ],
   plugins: [resolve(), babel({ babelHelpers: 'bundled' })],
