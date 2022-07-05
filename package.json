@@ -1,6 +1,6 @@
 {
   "name": "fcn",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Minimal className constructing tool",
   "keywords": [
     "class",
