@@ -11,7 +11,8 @@ export default function fcn() {
   while (i < arguments.length) {
     const arg = arguments[i++];
 
-    if (typeof arg === 'string' || typeof arg === 'number') {
+    if (arg === '') {
+    } else if (typeof arg === 'string' || typeof arg === 'number') {
       result = concat(result, arg);
     } else {
       for (key in arg) {
