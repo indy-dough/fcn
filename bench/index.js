@@ -2,22 +2,15 @@ const { Suite } = require('benchmark');
 const cn = require('classnames');
 const clsx = require('clsx');
 
-const fcn = require('../dist/index.min.js');
+const cc = require('../dist/fcn.js');
 
-function bench(name, ...args) {
-  console.log(`\n# ${name}`);
+function bench() {
   new Suite()
-    .add('classnames', () => cn.apply(cn, args))
-    .add('clsx      ', () => clsx.apply(clsx, args))
-    .add('fcn       ', () => fcn.apply(fcn, args))
+    .add('classnames', () => cn({ first: true, second: true, third: false }))
+    .add('clsx      ', () => clsx({ first: true, second: true, third: false }))
+    .add('fcn       ', () => `${cc('first', true)} ${cc('second', true)} ${cc('third', false)}`)
     .on('cycle', e => console.log('  ' + e.target))
     .run();
 }
 
-bench('Strings', 'first', 'second', 'third');
-
-bench('Optional', 'first', undefined, 'second', null, 'third');
-
-bench('Objects', { first: true, second: true, third: true });
-
-bench('Mixed', 'first', undefined, { second: true, third: false });
+bench('Comparison');
