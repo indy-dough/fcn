@@ -1,6 +1,6 @@
 # fcn &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/indy-dough/fcn/blob/main/LICENSE)
 
-Blazingly fast and extremely tiny library for conditional concatenation of classname strings.
+Blazingly ⚡️ fast and extremely tiny library for conditional concatenation of classname strings.
 
 ## Install
 
